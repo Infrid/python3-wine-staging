@@ -1,3 +1,5 @@
+[![Docker Repository on Quay](https://quay.io/repository/infrid/python3-wine-staging/status "Docker Repository on Quay")](https://quay.io/repository/infrid/python3-wine-staging)
+
 # Build your python 3 applications for windows using wine
 I need to build windows binaries for few python3 tools, this image
 creates the environment with wine and pyinstaller, no need to use a

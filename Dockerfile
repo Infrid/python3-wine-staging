@@ -20,7 +20,10 @@ RUN apt-get update \
     && xvfb-run wine python-3.9.5-amd64.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0 TargetDir=c:\Python3 \
     && rm python-3.9.5-amd64.exe \
     && wine C:/Python3/python.exe -m ensurepip --upgrade \
-    && wine C:/Python3/python.exe -m pip install pyinstaller
+    && wine C:/Python3/python.exe -m pip install pyinstaller \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+    
 
 ENTRYPOINT ["tini", "--"]
 CMD ["/bin/bash"]
